@@ -1,9 +1,18 @@
+# LinchPin Pinfile.
+
+##     1. Openstack
+      
 *     LinchPin Openstack Pinfile example
 
       sudo yum install python-pip python-virtualenv libffi-devel \
       openssl-devel libyaml-devel gmp-devel libselinux-python make \
       gcc redhat-rpm-config libxml2-python libxslt-python git
       
+
+
+*     pip install virtualenv
+*     virtualvenv linchpin
+*     Source linchpin/bin/activate
 *     Install pip install -I ansible==2.7
       As currently there is known issue with ansible 2.8 version
 
