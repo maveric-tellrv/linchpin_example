@@ -1,0 +1,58 @@
+simple:
+  topology:
+    topology_name: simple
+    resource_groups:
+      - resource_group_name: os_simple
+        resource_group_type: openstack
+        resource_definitions:
+          - name: "LTS"
+            role: os_server
+            flavor: m1.small
+            keypair: linchpin
+            count: 1
+            image: cirros
+            networks:
+              - provider_net_quicklab
+            availability_zone: nova
+          - name: "SUT"
+            role: os_server
+            flavor: m1.small
+            keypair: linchpin
+            count: 1
+            image: cirros
+            networks:
+              - provider_net_quicklab
+            availability_zone: nova
+        credentials:
+          filename: clouds.yaml
+          profile: openstack
+  layout:
+    inventory_layout:
+      vars:
+        hostname: __IP__
+      hosts:
+        LTS:
+          count: 1
+          host_groups:
+          - lts
+        SUT:
+          count: 1
+          host_groups:
+          - sut
+
+  hooks:
+  postup:
+    # check_ssh, ping and port_up are builtin hooks
+    # note builtin hooks follow different structure when compared to localhooks
+    - name: check_ssh
+      extra_vars:
+        # since checking ssh depends on logging into machine pem file, ssh_user are must
+        ansible_ssh_private_key_file:  id_rsa.pub
+        ansible_ssh_user: centos
+        ansible_ssh_common_args: "'-o StrictHostKeyChecking=no'"
+        ansible_python_interpreter: "/usr/bin/python"
+    - name: ping
+    - name: port_up
+      ports:
+        - 22
+        - 8080
