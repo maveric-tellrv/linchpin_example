@@ -13,11 +13,11 @@
 export OS_AUTH_URL=https://test.test.com:13000/v3
 # With the addition of Keystone we have standardized on the term **project**
 # as the entity that owns the resources.
-export OS_PROJECT_ID=d2d61ed7f19ce7b0eab
+export OS_PROJECT_ID=d2d61ed7b0eab
 export OS_PROJECT_NAME="jenkins"
 export OS_USER_DOMAIN_NAME="test.com"
 if [ -z "$OS_USER_DOMAIN_NAME" ]; then unset OS_USER_DOMAIN_NAME; fi
-export OS_PROJECT_DOMAIN_ID="62cf1b5ec006489db99e2b0ebfb55f57"
+export OS_PROJECT_DOMAIN_ID="62cf1b99e2b0ebfb55f57"
 if [ -z "$OS_PROJECT_DOMAIN_ID" ]; then unset OS_PROJECT_DOMAIN_ID; fi
 # unset v2.0 items in case set
 unset OS_TENANT_ID
