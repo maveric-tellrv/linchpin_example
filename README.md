@@ -10,6 +10,7 @@
 *     pip install linchpin
 
 *     cd openstack
+*     source rc.sh  # Enter the openstack password for you user
 
 *     linchpin -vvv up
 
