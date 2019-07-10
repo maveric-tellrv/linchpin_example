@@ -3,7 +3,7 @@ clouds:
     auth:
       auth_url: https://test.test.com:13000/v3
       username: "test"
-      project_id: d2d61e61ae864706b96d7f19ce7b0eab
+      project_id: 1ae864706b96d7f19ce7b0eab
       project_name: "test-jenkins"
       user_domain_name: "test.com"
     region_name: "regionOne"
