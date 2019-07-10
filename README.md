@@ -9,3 +9,17 @@ pip install linchpin
 cd openstack
 
 linchpin -vvv up
+
+
+This will create inventories inside "inventories"
+      ```
+      [lts]
+      10.0.0.46 hostname=10.0.0.46
+
+      [sut]
+      10.0.0.45 hostname=10.0.0.45
+
+      [all]
+      10.0.0.45 hostname=10.0.0.45
+      10.0.0.46 hostname=10.0.0.46
+      ```
