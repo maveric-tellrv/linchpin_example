@@ -1,4 +1,4 @@
-LinchPin Openstack Pin file example
+LinchPin Openstack Pinfile example
 
 sudo yum install python-pip python-virtualenv libffi-devel \
 openssl-devel libyaml-devel gmp-devel libselinux-python make \
