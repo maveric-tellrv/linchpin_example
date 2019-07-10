@@ -12,6 +12,7 @@ linchpin -vvv up
 
 
 This will create inventories inside "inventories"
+      
       ```
       [lts]
       10.0.0.46 hostname=10.0.0.46
