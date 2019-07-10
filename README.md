@@ -1,18 +1,19 @@
-#LinchPin Openstack Pinfile example
+*     LinchPin Openstack Pinfile example
 
-sudo yum install python-pip python-virtualenv libffi-devel \
-openssl-devel libyaml-devel gmp-devel libselinux-python make \
-gcc redhat-rpm-config libxml2-python libxslt-python git
+      sudo yum install python-pip python-virtualenv libffi-devel \
+      openssl-devel libyaml-devel gmp-devel libselinux-python make \
+      gcc redhat-rpm-config libxml2-python libxslt-python git
 
-pip install linchpin
+*     pip install linchpin
 
-cd openstack
+*     cd openstack
 
-linchpin -vvv up
+*     linchpin -vvv up
 
 
 This will create inventories inside "inventories"
       
+ 
       ```
       [lts]
       10.0.0.46 hostname=10.0.0.46
